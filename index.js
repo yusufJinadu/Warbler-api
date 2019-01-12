@@ -3,12 +3,13 @@ const express            = require("express")
 const app                = express()
 const cors               = require("cors")
 const bodyParser         = require("body-parser")
-const PORT               = process.env.PORT || 8081
+
 const errorHandler       = require("./handlers/error")
 const authRoutes         = require("./routes/auth")
 const messagesRoutes     = require("./routes/messages")
 const {loginRequired,ensureCorrectUser} = require("./middleware/auth")
 const db = require("./models")
+const PORT               = process.env.PORT || 8081
 
 app.use(cors())
 app.use(bodyParser.json())
