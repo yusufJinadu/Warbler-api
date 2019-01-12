@@ -13,9 +13,9 @@ const db = require("./models")
 app.use(cors())
 app.use(bodyParser.json())
 
-app.use("api/auth",authRoutes)
-app.use("api/users/:id/messages",loginRequired,ensureCorrectUser,messagesRoutes)
-app.get("api/messages",  async function(req,res,next){
+app.use("/api/auth",authRoutes)
+app.use("/api/users/:id/messages",loginRequired,ensureCorrectUser,messagesRoutes)
+app.get("/api/messages",  async function(req,res,next){
     try{
         let messages = await db.Message.find().sort({createdAt :"desc"})
         .populate("user",{
