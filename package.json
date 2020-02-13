@@ -19,7 +19,7 @@
     "express": "^4.16.4",
     "httpie": "^0.1.2",
     "jsonwebtoken": "^8.4.0",
-    "mongoose": "^5.4.2",
+    "mongoose": "^5.7.5",
     "node": "^10.15.0",
     "nvm": "0.0.4"
   }
